@@ -1,0 +1,26 @@
+@import "./variables";
+
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.android';
+
+@import "./common";
+
+ActionBar {
+    Button {
+        background-color: $primary-color;
+        width: 50;
+    }
+}
+
+.modal-page {
+    width: 800;
+}
+
+
+
+//
+//Label {
+//    border-width: 1;
+//    background-color: #66cc0f;
+//}
+//

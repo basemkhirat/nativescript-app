@@ -1,0 +1,11 @@
+@import "./variables";
+
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.ios';
+
+@import "./common";
+
+
+Label {
+    text-align: right;
+}

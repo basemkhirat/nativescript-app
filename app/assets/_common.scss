@@ -1,0 +1,793 @@
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+/* Font icon class*/
+
+
+.page-content {
+    background: #f5f5f7;
+}
+
+ActivityIndicator {
+    color: $primary-color;
+    display: block;
+    width: 25;
+}
+
+.modal-page {
+    background-color: #2c205c;
+    padding-bottom: 20;
+}
+
+.auth-page {
+
+    background: $primary-color;
+
+    .message {
+        background-color: green;
+        color: #ffffff;
+        padding: 10;
+    }
+
+    .errors {
+
+        .error {
+            background-color: #cc2f1e;
+            color: #ffffff;
+            padding: 10;
+        }
+    }
+
+
+    .auth-nav {
+
+        vertical-alignment: center;
+
+
+        Label {
+            font-size: 25px;
+            color: #ffffff;
+            text-align: left;
+
+        }
+
+    }
+
+    .auth-logo {
+
+        vertical-alignment: center;
+
+        Image {
+            width: 150;
+        }
+    }
+
+    .auth-title {
+
+        Label {
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: $primary-font;
+        }
+    }
+
+    .auth-form {
+
+        horizontal-alignment: center;
+        width: 70%;
+        margin-top: 80;
+
+        .input-field {
+
+            height: 50;
+            vertical-align: center;
+
+            TextField {
+                border-color: #cccccc;
+                border-bottom-width: 1;
+                color: #ffffff;
+                placeholder-color: #cccccc;
+                padding: 5;
+                text-align: right;
+            }
+
+            Button {
+                background-color: #ffffff;
+                color: $primary-color;
+            }
+        }
+
+        ActivityIndicator {
+            color: #ffffff;
+        }
+
+        .form-links {
+
+            justify-content: space-between;
+
+            Label {
+                color: #ffffff;
+            }
+        }
+    }
+
+}
+
+
+.book-page {
+
+    background-color: #ffcc00 ;
+
+    .message {
+        background-color: green;
+        color: #ffffff;
+        padding: 10;
+    }
+
+    .errors {
+
+        .error {
+            background-color: #cc2f1e;
+            color: #ffffff;
+            padding: 10;
+        }
+    }
+
+
+    .book-nav {
+
+        vertical-alignment: center;
+
+        Label {
+            font-size: 25px;
+            color: #ffffff;
+            text-align: left;
+        }
+    }
+
+    .book-heading {
+        .heading-title {
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: $primary-font;
+        }
+
+        .heading-event {
+            text-align: center;
+            font-weight: bold;
+            color: #ffffff;
+            font-family: $primary-font;
+        }
+    }
+
+    .book-form {
+
+        horizontal-alignment: center;
+        width: 70%;
+        padding: 40 0;
+
+        .input-field {
+
+            height: 50;
+            vertical-align: center;
+
+            TextField {
+                text-align: center;
+                border-color: #cccccc;
+                border-bottom-width: 1;
+                color: #ffffff;
+                placeholder-color: #cccccc;
+                padding: 5;
+            }
+
+            Button {
+                background-color: #ffffff;
+                color: $primary-color;
+            }
+        }
+
+        ActivityIndicator {
+            color: #ffffff;
+        }
+
+        .form-links {
+
+            justify-content: space-between;
+
+            Label {
+                color: #ffffff;
+            }
+        }
+    }
+
+}
+
+
+.tabs {
+
+    background-color: $primary-color;
+    background-color: #35485c;
+
+
+    .tab {
+
+        background-color: $primary-color;
+        width: 50%;
+        text-align: center;
+        color: white;
+        font-size: 20;
+        height: 100%;
+        padding: 14;
+    }
+
+    .tab.active {
+        color: #ff005a;
+    }
+
+}
+
+.event-card {
+
+    background-color: #ffffff;
+    border-color: #e3e3e3;
+    border-width: 1;
+    border-radius: 5;
+    margin-bottom: 15;
+
+    .card-cover {
+
+        width: 100%;
+        height: 170;
+
+        .card-cover-image {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: #393939;
+        }
+
+        .card-cover-image-default {
+            background-color: #d0d0d0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+    .event-card-status {
+
+        margin-top: 15;
+        vertical-alignment: top;
+        horizontal-alignment: left;
+
+        .status-label {
+            background-color: #ffffff;
+            padding: 3;
+            border-top-right-radius: 5;
+            border-bottom-right-radius: 5;
+            font-size: 12;
+        }
+    }
+
+    .event-card-ctrl {
+
+        z-index: 99999;
+        vertical-align: bottom;
+        margin-bottom: -20;
+        align-items: center;
+
+        .btn-like, .btn-share, .btn-calender {
+            width: 40;
+            height: 40;
+            border-radius: 40;
+            background: #ffffff;
+            margin: 0 5;
+            font-size: 15;
+            z-index: 9999999;
+            text-align: center;
+            padding: 10;
+        }
+    }
+
+    .event-details {
+
+        height: auto;
+        margin-top: 20;
+        padding-bottom: 20;
+
+
+
+
+        .side-details {
+
+            border-left-width: 1;
+            border-left-color: #cccccc;
+
+
+            .today, .month, .day {
+                font-family: $primary-font;
+                text-align: center;
+            }
+
+            .day {
+                color: #ff005a;
+                font-size: 22;
+            }
+        }
+
+        .main-details {
+
+            padding-right: 15;
+
+
+            .title {
+                font-weight: bold;
+                font-family: $primary-font;
+
+            }
+
+            .address, .time {
+                font-size: 14;
+                color: #6e6e6e;
+            }
+
+        }
+
+    }
+
+
+}
+
+.post-card {
+
+    background-color: #ffffff;
+    border-color: #e3e3e3;
+    border-width: 1;
+    border-radius: 5;
+    margin-bottom: 15;
+
+    .post-title {
+        font-weight: bold;
+        margin: 10 0;
+    }
+
+    .post-excerpt {
+        color: #858585;
+        font-size: 14;
+
+    }
+
+    .post-time {
+        font-size: 14;
+        color: #6e6e6e;
+    }
+}
+
+.action-bar {
+
+    background: $primary-color;
+
+    .fa {
+        font-size: 20;
+        color: white;
+    }
+
+    .action-bar-title {
+        color: #ffffff;
+        font-family: $primary-font;
+        font-size: 16;
+    }
+
+    .action-bar-center {
+        height: 35;
+    }
+
+}
+
+
+.event-page {
+
+    .event-image {
+
+        width: 100%;
+        height: auto;
+        background-color: #393939;
+        max-height: 200 Image {
+            height: 100%;
+            max-height: 200
+        }
+    }
+
+    .event-info {
+
+        background: #eeeeee;
+        border-width: 1;
+        border-color: #d3d3d3;
+        width: 100%;
+        border-radius: 5;
+        margin: 10 0;
+        padding: 15;
+
+        .day {
+            color: #ff005a;
+            font-size: 22;
+        }
+
+
+        Label {
+            text-align: center;
+            font-family: $primary-font;
+            color: #4c4c4c;
+        }
+
+        .fa {
+            font-family: FontAwesome;
+        }
+    }
+
+    .event-main {
+
+        padding: 10;
+
+        .event-title {
+            font-weight: bold;
+            font-size: 18;
+            font-family: $primary-font;
+        }
+
+    }
+
+    .event-ctrl {
+
+        margin: 10;
+
+        Button, Label {
+              padding: 5 10;
+          }
+
+        .event-register {
+            border-radius: 5;
+            background-color: $secondary-color;
+            color: #fff;
+            height: 30;
+        }
+
+        .event-type {
+            border-radius: 5;
+            background-color: $primary-color;
+            color: #fff;
+            height: 30;
+        }
+    }
+}
+
+.post-page {
+
+
+    .post-main {
+
+        padding: 15;
+
+        .post-title {
+            font-family: $primary-font;
+            font-weight: bold;
+            font-size: 18;
+            text-wrap: true;
+        }
+
+        .post-time {
+            color: #4c4c4c;
+            font-family: $primary-font;
+        }
+
+    }
+
+}
+
+
+.my-page-header {
+
+    height: 150;
+    background-color: $primary-color;
+    flex-direction: column;
+    justify-content: center;
+
+    Label {
+        margin: 2 0;
+    }
+
+    .my-page-header-image {
+        color: #ffffff;
+        height: 60;
+        width: 80;
+        font-size: 45;
+        text-align: center;
+    }
+
+    .my-page-header-name {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .my-page-header-email {
+        color: #ffffff;
+        text-align: center;
+    }
+
+}
+
+.my-page-content {
+
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .my-page-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+        color: #ffffff;
+        horizontal-align: center;
+        vertical-align: center;
+        width: 44%;
+        height: 100;
+        margin: 10;
+
+        .block-image {
+            font-size: 22;
+        }
+
+        .block-title {
+            margin-top: 10;
+        }
+    }
+
+}
+
+
+.event-form-page {
+
+    background: $primary-color;
+
+    .message {
+        background-color: green;
+        color: #ffffff;
+        padding: 10;
+    }
+
+    .errors {
+
+
+        .error {
+            background-color: #cc2f1e;
+            color: #ffffff;
+            padding: 10;
+            margin-bottom: 10;
+        }
+    }
+
+    .event-form-nav {
+
+        vertical-alignment: center;
+
+        Label {
+            font-size: 25px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+    }
+
+    .event-form-logo {
+
+        vertical-alignment: center;
+        horizontal-align: center;
+
+        Label {
+            font-size: 50;
+            color: #ffffff;
+        }
+    }
+
+    .event-form-title {
+
+        Label {
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    }
+
+    .event-form-inputs {
+
+        horizontal-alignment: center;
+        margin-top: 80;
+        width: 80%;
+
+
+        Label {
+            text-align: right;
+        }
+
+        .input-field {
+
+            height: 70;
+            vertical-align: center;
+            margin-bottom: 20;
+            padding: 0 10;
+            border-radius: 5;
+            background-color: #5d5d8b;
+
+            TextField {
+                text-align: center;
+                border-color: #ffffff;
+                border-bottom-width: 1;
+                color: #ffffff;
+                placeholder-color: #ffffff;
+                padding: 5;
+                height: 40;
+            }
+
+            ListPicker {
+                margin-right: 15;
+                width: 75
+            }
+
+            Button {
+                background-color: #ffffff;
+                color: #ffffff;
+            }
+
+            Label {
+                color: #ffffff;
+            }
+
+            .fa {
+                font-size: 30;
+                color: #8181ba;
+            }
+
+            ListPicker {
+                color: #9494d7;
+            }
+
+            SegmentedBar {
+                color: #ffffff;
+                selectedColor: #ffffff;
+            }
+
+            SegmentedBarItem {
+                color: #ffffff;
+            }
+
+        }
+
+        ActivityIndicator {
+            color: #ffffff;
+        }
+
+        Button {
+            background-color: #ffffff;
+            color: $primary-color;
+        }
+
+        .date-picker {
+            color: #ffffff;
+        }
+
+    }
+
+}
+
+
+.flp-container .flp-list-container {
+    border-radius: 10;
+}
+
+.flp-container .flp-list-container .flp-listview {
+    background-color: white;
+}
+
+.flp-container .flp-list-container .flp-listview .flp-row {
+    background-color: white;
+}
+
+/* .flp-container .flp-list-container .flp-listview .flp-row .flp-row-container {
+  padding: 10;
+} */
+.flp-container .flp-list-container .flp-listview .flp-row .flp-image {
+    margin: 10 0 10 5;
+}
+
+.flp-container .flp-list-container .flp-listview .flp-row .flp-title-container {
+    margin: 10 10 10 5;
+    /* margin: 0 10 0 10; */
+}
+
+.flp-container .flp-list-container .flp-listview .flp-row .flp-title-container .flp-title {
+    font-weight: bold;
+    font-size: 16;
+}
+
+.flp-container .flp-list-container .flp-listview .flp-row .flp-title-container .flp-description {
+    color: gray;
+    font-size: 13;
+}
+
+.flp-container .flp-list-container .flp-listview .flp-row .flp-title-container .flp-no-title {
+    margin-left: 15;
+    padding: 10 0;
+}
+
+.flp-container .flp-list-container .flp-listview .flp-row .flp-item-selected {
+    color: lightblue;
+}
+
+.flp-container .flp-hint-field {
+    padding: 10 15;
+    height: 40;
+    background-color: #E0E0E0;
+    border-radius: 10 10 0 0;
+    text-align: right;
+}
+
+.flp-container .flp-cancel-container {
+    background-color: #E0E0E0;
+    height: 40;
+    border-radius: 0 0 10 10;
+}
+
+.flp-container .flp-cancel-container .flp-btn-cancel {
+    font-weight: bold;
+    height: 40;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 1;
+    font-size: 12;
+}
+
+.categories-bar {
+    background-color: $primary-color;
+
+    .categories-wrapper {
+
+        horizontal-align: right;
+
+        .category-tab {
+            height: 38;
+            padding: 5;
+            font-size: 15;
+            font-family: $primary-font;
+            color: #ffffff;
+            min-width: 80;
+            text-align: center;
+            border-bottom-width: 8px;
+            border-bottom-color: $primary-color;
+        }
+
+        .home-tab {
+            height: 38;
+            padding: 8;
+            font-size: 17;
+            color: #ffffff;
+            min-width: 56;
+            text-align: center;
+            border-bottom-width: 8px;
+            border-bottom-color: $primary-color;
+        }
+
+        .home-tab.active, .category-tab.active {
+            border-bottom-color: $secondary-color;
+        }
+    }
+}
+
+SearchBar {
+    background-color: $primary-color;
+}

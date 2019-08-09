@@ -1,0 +1,55 @@
+{
+  "nativescript": {
+    "id": "com.tfa3l.nor",
+    "tns-android": {
+      "version": "6.1.0-2019-07-29-182447-01"
+    },
+    "tns-ios": {
+      "version": "6.0.2"
+    }
+  },
+  "description": "Nor Events",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "dependencies": {
+    "@nstudio/nativescript-pulltorefresh": "^1.0.1",
+    "axios": "^0.19.0",
+    "debounce": "^1.2.0",
+    "moment": "^2.24.0",
+    "nativescript-calendar": "^2.1.0",
+    "nativescript-datetimepicker": "^1.2.1",
+    "nativescript-fancyalert": "^3.0.8",
+    "nativescript-imagepicker": "^6.2.0",
+    "nativescript-localize": "^4.2.0",
+    "nativescript-social-share": "^1.5.2",
+    "nativescript-socketio": "^3.3.1",
+    "nativescript-theme-core": "~1.0.6",
+    "nativescript-toasts": "^1.0.3",
+    "nativescript-ui-sidedrawer": "~7.0.0",
+    "nativescript-videoplayer": "^4.2.1",
+    "nativescript-vue": "~2.3.0",
+    "net": "^1.0.2",
+    "rxjs": "~6.5.0",
+    "tns-core-modules": "^6.0.5",
+    "vuex": "^3.1.1"
+  },
+  "scripts": {
+    "splash": "tns resources generate splashes \"icon.png\" --background \"#2c205c\"",
+    "icon": "tns resources generate icons \"icon.png\" --background \"#2c205c\"",
+    "ios": "tns run ios --no-hmr --provision e257f83f-2e45-4abb-aad8-1a2a218b938e",
+    "android": "tns run android --no-hmr",
+    "build:ios": "tns run ios --release --for-device --env.uglify --env.production --provision e257f83f-2e45-4abb-aad8-1a2a218b938e"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "~7.1.0",
+    "babel-loader": "~8.0.0",
+    "nativescript-dev-webpack": "^1.0.3",
+    "nativescript-vue-template-compiler": "~2.3.0",
+    "node-sass": "^4.7.1",
+    "vue-loader": "~15.4.0"
+  },
+  "gitHead": "f28dbc60d74dd2cef4b645afd8fdd63bbb12c73e",
+  "readme": "NativeScript Application"
+}
