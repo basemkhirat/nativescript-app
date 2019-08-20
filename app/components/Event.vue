@@ -4,8 +4,9 @@
 
         <StackLayout row="0" class="card-cover">
 
-            <StackLayout class="card-cover-image" v-if="event.media" :backgroundImage="event.media.thumbnails.large"
-                         @tap="openDetails"></StackLayout>
+            <WebImage height="100%" v-if="event.media" @tap="openDetails" stretch="aspectFill" placeholder="~/assets/images/loader.gif" :src="event.media.thumbnails.large"></WebImage>
+<!--            <StackLayout class="card-cover-image" v-if="event.media" :backgroundImage="event.media.thumbnails.large"-->
+<!--                         @tap="openDetails"></StackLayout>-->
             <StackLayout class="card-cover-image-default" v-if="!event.media" backgroundImage="~/assets/default/event.png"
                          @tap="openDetails"></StackLayout>
 

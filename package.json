@@ -28,6 +28,7 @@
     "nativescript-ui-sidedrawer": "~7.0.0",
     "nativescript-videoplayer": "^4.2.1",
     "nativescript-vue": "~2.3.0",
+    "nativescript-web-image-cache": "^5.0.0",
     "net": "^1.0.2",
     "rxjs": "~6.5.0",
     "tns-core-modules": "^6.0.5",
@@ -38,7 +39,7 @@
     "icon": "tns resources generate icons \"icon.png\" --background \"#2c205c\"",
     "ios": "tns run ios --no-hmr --provision e257f83f-2e45-4abb-aad8-1a2a218b938e",
     "android": "tns run android --no-hmr",
-    "build:ios": "tns run ios --release --for-device --env.uglify --env.production --provision e257f83f-2e45-4abb-aad8-1a2a218b938e"
+    "build:ios": "tns build ios --release --for-device --env.uglify --env.production --provision e257f83f-2e45-4abb-aad8-1a2a218b938e"
   },
   "devDependencies": {
     "@babel/core": "~7.1.0",

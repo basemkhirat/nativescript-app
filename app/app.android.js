@@ -50,11 +50,25 @@ Vue.registerElement(
 );
 
 
+var imageCache = require("nativescript-web-image-cache");
+
+
+Vue.registerElement('WebImage', () => imageCache.WebImage);
+
+import * as application from "tns-core-modules/application";
+
+if(application.android){
+    application.on("launch", function () {
+        imageCache.initialize();
+    });
+}
+
 Vue.component("Navbar", Navbar);
 Vue.prototype.$routes = routes;
 Vue.prototype.$resource = resource;
-//Vue.config.silent = (TNS_ENV === 'production');
-Vue.config.silent = true;
+Vue.config.silent = (TNS_ENV === 'production');
+//Vue.config.silent = true;
+
 
 new Vue({
     store,

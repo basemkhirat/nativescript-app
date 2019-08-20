@@ -2,7 +2,11 @@
 
     <Page class="page home-page" @loaded="loaded">
 
-        <Navbar></Navbar>
+        <Navbar>
+            <ActionItem horizontalAlignment="right"   @tap="activateSearch">
+                <button class="fa" text.decode="&#xf002;" :class="{active: search_mode}"/>
+            </ActionItem>
+        </Navbar>
 
 
         <GridLayout class="page-content" rows="auto, auto, *, 50">

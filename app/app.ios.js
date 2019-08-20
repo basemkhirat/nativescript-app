@@ -48,6 +48,9 @@ Vue.registerElement(
     () => Video
 );
 
+Vue.registerElement('WebImage', () => require('nativescript-web-image-cache').WebImage);
+
+
 Vue.component("Navbar", Navbar);
 Vue.prototype.$routes = routes;
 Vue.prototype.$resource = resource;

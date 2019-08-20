@@ -3,9 +3,11 @@
     <GridLayout rows="150,150" class="post-card">
 
         <StackLayout row="0" backgroundColor="#000" @tap="openDetails">
-            <Image v-if="post.media" :src="post.media.thumbnails.medium"/>
+            <WebImage height="100%" v-if="post.media" stretch="aspectFill" placeholder="~/assets/images/loader.gif" :src="post.media.thumbnails.medium"></WebImage>
+<!--            <Image v-if="post.media" :src="post.media.thumbnails.medium"/>-->
             <Image v-if="!post.media" src="~/assets/default/post.png"/>
         </StackLayout>
+
 
         <StackLayout row="1" class="p-10">
 

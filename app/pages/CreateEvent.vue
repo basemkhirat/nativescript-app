@@ -96,7 +96,7 @@
                                            justifyContent="space-between">
 
                                 <StackLayout orientation="horizontal">
-                                    <Label v-if="place_name" @tap="showPlacePicker" :text="place_name"/>
+                                    <Label v-if="place_name" @tap="showPlacePicker" textWrap="true" :text="place_name"/>
                                     <Label v-if="!event.place" @tap="showPlacePicker" class="fa"
                                            text.decode="&#xf041;"/>
 

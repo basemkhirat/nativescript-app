@@ -182,11 +182,13 @@
             .sidedrawer-header-name {
                 color: $primary-color;
                 text-align: center;
+                font-size: 15;
             }
 
             .sidedrawer-header-email {
                 color: $primary-color;
                 text-align: center;
+                font-size: 15;
             }
 
         }
@@ -214,6 +216,7 @@
 
                 .sidedrawer-item-title {
                     font-family: $primary-font;
+                    font-size: 15;
                 }
 
                 &.selected {

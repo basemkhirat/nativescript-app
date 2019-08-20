@@ -12,6 +12,7 @@
 
 </template>
 
+
 <script>
 
     import debounce from 'debounce';
@@ -23,10 +24,6 @@
 
         props: {
             q: String,
-            page: {
-                type: Number,
-                default: 1
-            },
             categories: Array,
         },
 
@@ -34,6 +31,7 @@
             return {
                 posts: [],
                 loading: false,
+                page: 1,
                 query: {
                     q: this.q,
                     limit: 10,
@@ -53,6 +51,8 @@
             },
             query: {
                 handler() {
+
+                    this.posts = [];
 
                     this.loading = true;
 

@@ -28,10 +28,6 @@
                 type: Number,
                 default: 1
             },
-            page: {
-                type: Number,
-                default: 1
-            },
             isLiked: {
                 type: Boolean,
                 default: false
@@ -46,6 +42,7 @@
             return {
                 events: [],
                 loading: false,
+                page: 1,
                 query: {
                     q: this.q,
                     limit: 10,
@@ -97,6 +94,8 @@
 
             query: {
                 handler() {
+
+                    this.events = [];
 
                     this.loading = true;
 
