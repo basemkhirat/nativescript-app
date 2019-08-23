@@ -23,6 +23,7 @@
 
 		<activity
 			android:name="com.tns.NativeScriptActivity"
+			android:launchMode="singleTask"
 			android:label="@string/title_activity_kimera"
 			android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|locale|uiMode"
 			android:theme="@style/LaunchScreenTheme">
@@ -33,7 +34,21 @@
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
+
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<!-- Custom URL Schemes -->
+				<data android:scheme="com.googleusercontent.apps.827628876469-4irgblh5h7esfa736v089pf2e2j5n2pp"/>
+<!--				<data android:scheme="msalf376fa87-64a9-89a1-8b56-e0d48fc08107"/>-->
+			</intent-filter>
+
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
+
+		<provider android:authorities="com.facebook.app.FacebookContentProvider367149670558681"
+				  android:name="com.facebook.FacebookContentProvider"
+				  android:exported="true"/>
 	</application>
 </manifest>

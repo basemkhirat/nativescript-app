@@ -15,6 +15,8 @@
 
             <Categories row="1" @changed="activateCategory"></Categories>
 
+<!--            <Button @tap="login" text="Continue with Facebook (Custom)"></Button>-->
+
             <Events :q="query_string" :categories="category ? [category] : []" row="2"
                     v-show="tab == 'events'"/>
             <Posts :q="query_string" :categories="category ? [category] : []" row="2" v-show="tab == 'posts'"/>
@@ -38,10 +40,7 @@
     import Events from '~/components/Events';
     import Posts from '~/components/Posts';
     import Categories from '~/components/Categories';
-
-    import * as app from 'tns-core-modules/application'
-    import * as platform from 'tns-core-modules/platform'
-    import * as color from 'tns-core-modules/color'
+    import Auth from "~/plugins/Auth";
 
     export default {
 
@@ -72,11 +71,19 @@
 
         methods: {
 
+            login: function() {
+
+                Auth.login("facebook", (error, token) => {
+                    if(error){
+                        console.log("Error: " + error);
+                    }
+
+                    console.log(token);
+                });
+            },
+
             loaded(){
-                if (app.android && platform.device.sdkVersion >= "21") {
-                    const window = app.android.foregroundActivity.getWindow();
-                    window.setStatusBarColor(new color.Color("#2c205c").android);
-                }
+                // app loaded
             },
 
             activateTab(tab) {
