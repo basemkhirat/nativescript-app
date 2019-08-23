@@ -41,7 +41,6 @@
 				<category android:name="android.intent.category.BROWSABLE" />
 				<!-- Custom URL Schemes -->
 				<data android:scheme="com.googleusercontent.apps.827628876469-4irgblh5h7esfa736v089pf2e2j5n2pp"/>
-<!--				<data android:scheme="msalf376fa87-64a9-89a1-8b56-e0d48fc08107"/>-->
 			</intent-filter>
 
 		</activity>
