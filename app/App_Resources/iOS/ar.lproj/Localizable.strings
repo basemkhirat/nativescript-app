@@ -1,3 +1,4 @@
+"or_login_with_your_email" = "أو عند طريق بريدك الإلكتروني";
 "not_published" = "غير مفعل";
 "event_created" = "تم إنشاء الفعالية بنجاح";
 "ok" = "موافق";
@@ -63,4 +64,3 @@
 "login" = "تسجيل الدخول";
 "title_activity_kimera" = "Nor";
 "app_name" = "Nor";
-"__" = "";

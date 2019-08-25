@@ -63,5 +63,6 @@
   "cancel": "إلغاء",
   "ok": "موافق",
   "event_created" : "تم إنشاء الفعالية بنجاح",
-  "not_published": "غير مفعل"
+  "not_published": "غير مفعل",
+  "or_login_with_your_email": "أو عند طريق بريدك الإلكتروني"
 }

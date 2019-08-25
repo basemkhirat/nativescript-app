@@ -18,7 +18,14 @@
                     <Label textWrap="true" :text="'login' | L"></Label>
                 </StackLayout>
 
-                <StackLayout row="3" class="auth-form m-t-30">
+                <StackLayout row="3" class="auth-form">
+
+                    <FlexboxLayout orientation="vertical" justifyContent="space-between">
+                        <Button class="fa facebook-share-btn" @tap="facebook" text.decode="&#xf230;"></Button>
+                        <Button class="fa google-share-btn" @tap="google" text.decode="&#xf0d4;"></Button>
+                    </FlexboxLayout>
+
+                    <Label class="login-separator" :text="'or_login_with_your_email' | L">OR</Label>
 
                     <StackLayout class="errors">
                         <Label textWrap="true" class="error" v-for="error in errors" :key="error" :text="error"></Label>
@@ -39,7 +46,8 @@
                     </StackLayout>
 
                     <FlexboxLayout class="form-links m-t-10">
-                        <Label :text="'forget_password' | L" @tap="$showModal($routes.Forget, {clearHistory: true, fullscreen: true, backstackVisible: false})"/>
+                        <Label :text="'forget_password' | L"
+                               @tap="$showModal($routes.Forget, {clearHistory: true, fullscreen: true, backstackVisible: false})"/>
                         <Label :text="'new_user' | L" @tap="$showModal($routes.Register, {fullscreen: true})"/>
                     </FlexboxLayout>
 
@@ -54,8 +62,9 @@
 
 <script>
 
+    import Auth from "~/plugins/Auth";
     import {TNSFancyAlert} from "nativescript-fancyalert";
-    import L from 'nativescript-localize';
+
 
     export default {
 
@@ -92,6 +101,64 @@
                         this.loading = false;
                     });
 
+            },
+
+            facebook() {
+
+                this.$modal.close();
+
+                Auth.login("facebook", (error, tokens) => {
+
+                    if (error) return false;
+
+                    this.$resource.auth.post("/facebook", {access_token: tokens.accessToken})
+                        .then(data => {
+
+                            this.$store.dispatch("login", data.token);
+
+                            TNSFancyAlert.showSuccess(
+                                this.$L("welcome"),
+                                undefined,
+                                this.$L("close")
+                            );
+                        })
+                        .catch(errors => {
+                            TNSFancyAlert.showError(
+                                errors[0],
+                                undefined,
+                                this.$L("close")
+                            );
+                        });
+                });
+            },
+
+            google() {
+
+                this.$modal.close();
+
+                Auth.login("google", (error, tokens) => {
+
+                    if (error) return false;
+
+                    this.$resource.auth.post("/google", {access_token: tokens.accessToken})
+                        .then(data => {
+
+                            this.$store.dispatch("login", data.token);
+
+                            TNSFancyAlert.showSuccess(
+                                this.$L("welcome"),
+                                undefined,
+                                this.$L("close")
+                            );
+                        })
+                        .catch(errors => {
+                            TNSFancyAlert.showError(
+                                errors[0],
+                                undefined,
+                                this.$L("close")
+                            );
+                        });
+                });
             }
         }
 

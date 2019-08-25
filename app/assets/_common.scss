@@ -73,9 +73,36 @@ ActivityIndicator {
 
     .auth-form {
 
+
         horizontal-alignment: center;
         width: 70%;
-        margin-top: 80;
+        margin-top: 50;
+
+        .login-separator{
+            text-align: center;
+            font-size: 15;
+            padding: 20 0;
+            color: #ffffff;
+        }
+
+        .facebook-share-btn{
+            background-color: #2e2279;
+            color: #ffffff;
+            width: 45%;
+            height: 35;
+            font-size: 17;
+            border-radius: 5;
+        }
+
+        .google-share-btn {
+            background-color: #4285f4;
+            color: #ffffff;
+            width: 45%;
+            height: 35;
+            font-size: 17;
+            border-radius: 5;
+        }
+
 
         .input-field {
 

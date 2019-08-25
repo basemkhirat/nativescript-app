@@ -46,7 +46,7 @@
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
 
-		<provider android:authorities="com.facebook.app.FacebookContentProvider367149670558681"
+		<provider android:authorities="com.facebook.app.FacebookContentProvider344988263051937"
 				  android:name="com.facebook.FacebookContentProvider"
 				  android:exported="true"/>
 	</application>

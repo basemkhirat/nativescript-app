@@ -15,8 +15,6 @@
 
             <Categories row="1" @changed="activateCategory"></Categories>
 
-<!--            <Button @tap="login" text="Continue with Facebook (Custom)"></Button>-->
-
             <Events :q="query_string" :categories="category ? [category] : []" row="2"
                     v-show="tab == 'events'"/>
             <Posts :q="query_string" :categories="category ? [category] : []" row="2" v-show="tab == 'posts'"/>
@@ -40,7 +38,6 @@
     import Events from '~/components/Events';
     import Posts from '~/components/Posts';
     import Categories from '~/components/Categories';
-    import Auth from "~/plugins/Auth";
 
     export default {
 
@@ -70,17 +67,6 @@
         },
 
         methods: {
-
-            login: function() {
-
-                Auth.login("facebook", (error, token) => {
-                    if(error){
-                        console.log("Error: " + error);
-                    }
-
-                    console.log(token);
-                });
-            },
 
             loaded(){
                 // app loaded

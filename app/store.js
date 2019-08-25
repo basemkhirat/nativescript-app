@@ -86,7 +86,8 @@ export default new Vuex.Store({
                 .then(data => {
                     store.commit("user", data);
                     store.commit("events_should_change");
-                }).catch(error => {
+                })
+                .catch(error => {
                     console.log("Error" + error);
                 });
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="__">"nor"</string>
   <string name="help">"مساعدة"</string>
   <string name="posts">"الأخبار"</string>
   <string name="events">"الفعاليات"</string>
   <string name="logout">"تسجيل الخروج"</string>
   <string name="login">"تسجيل الدخول"</string>
+  <string name="or_login_with_your_email">"أو عند طريق بريدك الإلكتروني"</string>
   <string name="not_published">"غير مفعل"</string>
   <string name="event_created">"تم إنشاء الفعالية بنجاح"</string>
   <string name="ok">"موافق"</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="or_login_with_your_email">"أو عند طريق بريدك الإلكتروني"</string>
   <string name="not_published">"غير مفعل"</string>
   <string name="event_created">"تم إنشاء الفعالية بنجاح"</string>
   <string name="ok">"موافق"</string>
@@ -65,5 +66,4 @@
   <string name="login">"تسجيل الدخول"</string>
   <string name="title_activity_kimera">"Nor"</string>
   <string name="app_name">"Nor"</string>
-  <string name="__">""</string>
 </resources>

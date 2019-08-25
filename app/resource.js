@@ -15,8 +15,10 @@ import place from '~/resources/place';
 
 const instance = axios.create({
     baseURL: 'https://cmsjs.dotdev.ae/api',
-     timeout: 2
+    //baseURL: 'http://10.10.11.78:3000/api',
+    timeout: 2
 });
+
 
 instance.interceptors.request.use(function (request) {
 

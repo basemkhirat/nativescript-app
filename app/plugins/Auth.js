@@ -41,8 +41,8 @@ function configureFacebook() {
 
     let facebookProviderOptions = {
         openIdSupport: "oid-none",
-        clientId: "367149670558681",
-        clientSecret: "00e84808247e43fa99333ef42939d7f3",
+        clientId: "344988263051937",
+        clientSecret: "84dbb48a3dfb9a4a5ea7fbd463ec3ec2",
         redirectUri: "https://www.facebook.com/connect/login_success.html",
         scopes: ["email"]
     };
